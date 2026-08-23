@@ -22,3 +22,36 @@ class PipelineState(Enum):
     COMPLETE = "COMPLETE"
     CANCELLED = "CANCELLED"
     FAILED = "FAILED"
+
+# used to assign the slices of the panos, order here is important the enum is clockwise order, note is that front
+# is the front of the image, not north, these positions are not the cardinal directions
+class Direction(Enum):
+    FRONT = "FRONT"
+    FRONT_RIGHT = "FRONT_RIGHT"
+    RIGHT = "RIGHT"
+    BACK_RIGHT = "BACK_RIGHT"
+    BACK = "BACK"
+    BACK_LEFT = "BACK_LEFT"
+    LEFT = "LEFT"
+    FRONT_LEFT = "FRONT_LEFT"
+
+# used for setting road finding rules
+class JunctionType(Enum):
+    T_JUNCTION = "T_JUNCTION"
+    CROSSROADS = "CROSSROADS"
+    ROUNDABOUT = "ROUNDABOUT"
+    Y_JUNCTION = "Y_JUNCTION"
+    FORK = "FORK"
+    DEAD_END = "DEAD_END"
+    NONE = "NONE"
+
+class RoadClass(Enum):
+    RESIDENTIAL = "RESIDENTIAL"
+    SERVICE = "SERVICE"
+    TERTIARY = "TERTIARY"
+    SECONDARY = "SECONDARY"
+    PRIMARY = "PRIMARY"
+    TRUNK = "TRUNK"
+    MOTORWAY = "MOTORWAY"
+    FOOTWAY = "FOOTWAY"
+    PEDESTRIAN = "PEDESTRIAN"
